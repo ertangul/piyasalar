@@ -1,0 +1,72 @@
+h1.title
+    font-size: 28px;
+    font-weight: bold;
+    color: #2b3b48;
+    line-height: 34px;
+    margin-top: 31px;
+    margin-bottom: 38px;
+
+.form-field
+    &.twin 
+        display: flex;
+    
+input
+    border: none;
+    width: 100%;
+    padding: 15px 15px 10px 15px;
+    line-height: 1.25;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    &:focus
+        border: none;
+        outline: none;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    &[type='number']
+        -moz-appearance: textfield;
+        &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+            -webkit-appearance: none;
+            -moz-appearance: none;
+select
+    background-color: #fff;
+    border-radius: 0px;
+    padding: 15px 30px 10px 15px;
+    font-size: 16px;
+    line-height: 1.25;
+    display: block;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(../../assets/images/icons/down-arrow.svg);
+    background-position: right 10px top 55%;
+    background-repeat: no-repeat;
+    background-size: 13px;
+    
+    &::-ms-expand
+        display: none;
+    &:focus
+        outline: none;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+
+button
+    cursor: pointer;
+
+.btn
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    padding: 15px;
+    color: #2b3b48;
+    &:focus
+        color: inherit;
+    &.btn--block
+        color: #fff;
+        background-color: #2b3b48;
+    &.btn--outline
+        border: 2px solid #4f6477;
