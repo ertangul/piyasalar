@@ -1,0 +1,39 @@
+extends templates/_default
+
+block content
+  section.container
+    div.row
+      h1.title Piyasalar
+
+    div.row.exchange-app
+      div.exchange-table
+        +exchange_item('USD', 'Amerikan Doları')
+        +exchange_item('EUR', 'Avrupa Para Birimi')
+        +exchange_item('JPY', 'Japon Yeni')
+        +exchange_item('GBP', 'İngiliz Sterlini')
+        +exchange_item('DKK', 'Danimarka Kronu')
+        +exchange_item('NOK', 'Norveç Kronu')
+
+      div.exchange-translator
+        div.exchange-translator__wrap
+          h3 Döviz Çevir
+          div.translator-app
+            div.form-field.twin
+              label.input(for="all_currency")
+                input(name='all_currency', type='number', placeholder='Sayı giriniz')
+              - var units = ['usd', 'eur', 'jpy', 'gbp', 'dkk', 'nok'];
+              +currency_select('currency_unit', units)
+            button.toggle-currency
+              img(src='/assets/images/icons/buttons-change.svg')
+            div.form-field
+              label.input(for="tl_currency", class='tl-currency')
+                input(name='tl_currency', type='number', placeholder=' ', readonly=true)
+                span.unit TL
+
+
+  section.container.footer
+    div.row
+      div.exchange-footer
+        a(href='#' class='btn btn--block') Detaylı Bilgi
+        a(href='#' class='btn btn--outline') Tüm Piyasalar
+

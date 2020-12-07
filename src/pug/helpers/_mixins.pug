@@ -1,0 +1,22 @@
+mixin exchange_item(unit_name, unit_desc)
+    div.exchange-table__item(data-unit=unit_name)
+        div.item-flag
+            picture
+                source(media='(min-width:991px)', srcset='/assets/images/flags/' + unit_name.toLowerCase() + '/' + unit_name.toLowerCase() + '@3x.png')
+                source(media='(min-width:768px)', srcset='/assets/images/flags/' + unit_name.toLowerCase() + '/' + unit_name.toLowerCase() + '@2x.png')
+                img(src='/assets/images/flags/' + unit_name.toLowerCase() + '/' + unit_name.toLowerCase() + '.png', alt=unit_name.toLowerCase())
+        div.item-unit
+            div.name= unit_name
+            div.desc= unit_desc
+        div.item-buying
+            div.head ALIŞ
+            div.value= '--'
+        div.item-sales
+            div.head SATIŞ
+            div.value= '--'
+
+mixin currency_select(select_name, items)
+    label.select-box(for=select_name)
+        select(name=select_name)
+            for item in items
+                option(value=item) #{item.toUpperCase()}
