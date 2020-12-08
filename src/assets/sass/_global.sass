@@ -29,6 +29,8 @@ input
         &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
             -webkit-appearance: none;
             -moz-appearance: none;
+    &[readonly], &[readonly='readonly']
+        cursor: default;
 select
     background-color: #fff;
     border-radius: 0px;
