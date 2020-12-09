@@ -9,3 +9,18 @@
     flex-wrap: wrap;
     margin-right: -$container-gutter-d;
     margin-left: -$container-gutter-d;
+
+@media #{$breakpoint-mid-desktop}
+    .container
+        max-width: 100%;
+        width: 100%;
+        padding-left: $container-gutter-d;
+        padding-right: $container-gutter-d;
+    .row
+        margin: 0
+
+@media #{$breakpoint-tablet}
+    body
+        height: auto;
+        padding-bottom: 20px
+

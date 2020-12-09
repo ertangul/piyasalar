@@ -7,6 +7,7 @@ h1.title
     margin-bottom: 38px;
 
 .form-field
+    width: 100%;
     &.twin 
         display: flex;
     
@@ -59,12 +60,17 @@ select
 button
     cursor: pointer;
 
+span
+    display: inline-block;
+    vertical-align: middle;
+
 .btn
     text-align: center;
     font-weight: bold;
     font-family: $base-font;
     padding: 15px;
     color: $base-color;
+    letter-spacing: 0.94px;
     &:focus
         color: inherit;
     &.btn--block
@@ -72,3 +78,7 @@ button
         background-color: $base-color;
     &.btn--outline
         border: 2px solid $secondary-color;
+    
+    @media #{$breakpoint-tablet}
+        &.btn--outline
+            border: none;
